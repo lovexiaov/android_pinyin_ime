@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/luoyl/code/google/app/src/main/assets"/><source path="/home/luoyl/code/google/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/luoyl/code/google/app/src/debug/assets"/></dataSet></merger>
