@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/home/luoyl/code/google/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 59,
+                    "endOffset": 110
+                },
+                "from": {
+                    "file": "/home/luoyl/code/google/app/src/main/res/values-land/dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 686,
+                        "endColumn": 59,
+                        "endOffset": 741
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 115,
+                    "endColumn": 48,
+                    "endOffset": 159
+                },
+                "from": {
+                    "file": "/home/luoyl/code/google/app/src/main/res/values-land/dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 746,
+                        "endColumn": 48,
+                        "endOffset": 790
+                    }
+                }
+            }
+        ]
+    }
+]

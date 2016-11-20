@@ -1,0 +1,96 @@
+{
+  "buildFiles": [
+    "/home/luoyl/code/google/app/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/home/luoyl/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/luoyl/code/google/app/src/main/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "jni_pinyinime-release-x86": {
+      "buildCommand": "/home/luoyl/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/luoyl/code/google/app/src/main/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/lib /home/luoyl/code/google/app/build/intermediates/ndkBuild/release/obj/local/x86/libjni_pinyinime.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "jni_pinyinime",
+      "files": [
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/android/com_android_inputmethod_pinyin_PinyinDecoderService.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/dictbuilder.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/dictlist.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/dicttrie.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/lpicache.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/matrixsearch.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/mystdlib.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/ngram.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/pinyinime.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/searchutility.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/spellingtable.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/spellingtrie.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/splparser.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/sync.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/userdict.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/utf16char.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        },
+        {
+          "src": "/home/luoyl/code/google/app/src/main/jni/share/utf16reader.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/luoyl/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64\" \"-target\" \"i686-none-linux-android\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fPIC\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/home/luoyl/Android/Sdk/ndk-bundle/sources/cxx-stl/system/include\" \"-I/home/luoyl/code/google/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/luoyl/Android/Sdk/ndk-bundle/platforms/android-14/arch-x86/usr/include\""
+        }
+      ],
+      "output": "/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/obj/local/x86/libjni_pinyinime.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cppCompilerExecutable": "/home/luoyl/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

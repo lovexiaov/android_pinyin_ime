@@ -1,0 +1,15 @@
+Executable : /home/luoyl/Android/Sdk/ndk-bundle/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/home/luoyl/code/google/app/src/main/jni/Android.mk
+APP_ABI=mips64
+NDK_ALL_ABIS=mips64
+NDEBUG=0
+APP_PLATFORM=android-21
+NDK_OUT=/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=/home/luoyl/code/google/app/build/intermediates/ndkBuild/release/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-n
+jvmArgs : 
+
