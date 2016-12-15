@@ -29,6 +29,7 @@
       codes="45|51|33|46|48|53|49|37|43|44"/>
   </row>
 
+  <!--width 属性限制的是 key 的宽度-->
   <row start_pos_x="4.078%p" width="10.205%p">
     <keys splitter="|" labels="A|S|D|F|G|H|J|K|L"
       codes="29|47|32|34|35|36|38|39|40"/>
@@ -51,6 +52,7 @@
     </key>
     <keys splitter="|" labels="Z|X|C|V|B|N|M"
       codes="54|52|31|50|30|42|41"/>
+    <!-- 这里的 id 对应 template 中 <key> 节点的 id -->
     <key id="3"/>
   </row>
 

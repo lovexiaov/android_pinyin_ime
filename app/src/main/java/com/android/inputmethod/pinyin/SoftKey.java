@@ -21,210 +21,213 @@ import android.graphics.drawable.Drawable;
 /**
  * Class for soft keys which defined in the keyboard xml file. A soft key can be
  * a basic key or a toggling key.
- * 
+ *
  * @see com.android.inputmethod.pinyin.SoftKeyToggle
  */
 public class SoftKey {
-    protected static final int KEYMASK_REPEAT = 0x10000000;
-    protected static final int KEYMASK_BALLOON = 0x20000000;
+  protected static final int KEYMASK_REPEAT = 0x10000000;
+  protected static final int KEYMASK_BALLOON = 0x20000000;
 
-    /**
-     * For a finger touch device, after user presses a key, there will be some
-     * consequent moving events because of the changing in touching pressure. If
-     * the moving distance in x is within this threshold, the moving events will
-     * be ignored.
-     */
-    public static final int MAX_MOVE_TOLERANCE_X = 0;
+  /**
+   * For a finger touch device, after user presses a key, there will be some
+   * consequent moving events because of the changing in touching pressure. If
+   * the moving distance in x is within this threshold, the moving events will
+   * be ignored.
+   */
+  public static final int MAX_MOVE_TOLERANCE_X = 0;
 
-    /**
-     * For a finger touch device, after user presses a key, there will be some
-     * consequent moving events because of the changing in touching pressure. If
-     * the moving distance in y is within this threshold, the moving events will
-     * be ignored.
-     */
-    public static final int MAX_MOVE_TOLERANCE_Y = 0;
+  /**
+   * For a finger touch device, after user presses a key, there will be some
+   * consequent moving events because of the changing in touching pressure. If
+   * the moving distance in y is within this threshold, the moving events will
+   * be ignored.
+   */
+  public static final int MAX_MOVE_TOLERANCE_Y = 0;
 
-    /**
-     * Used to indicate the type and attributes of this key. the lowest 8 bits
-     * should be reserved for SoftkeyToggle.
-     */
-    protected int mKeyMask;
+  /**
+   * Used to indicate the type and attributes of this key. the lowest 8 bits
+   * should be reserved for SoftkeyToggle.
+   */
+  protected int mKeyMask;
 
-    protected SoftKeyType mKeyType;
+  protected SoftKeyType mKeyType;
 
-    protected Drawable mKeyIcon;
+  protected Drawable mKeyIcon;
 
-    protected Drawable mKeyIconPopup;
+  protected Drawable mKeyIconPopup;
 
-    protected String mKeyLabel;
+  protected String mKeyLabel;
 
-    protected int mKeyCode;
+  protected int mKeyCode;
 
-    /**
-     * If this value is not 0, this key can be used to popup a sub soft keyboard
-     * when user presses it for some time.
-     */
-    public int mPopupSkbId;
+  /**
+   * If this value is not 0, this key can be used to popup a sub soft keyboard
+   * when user presses it for some time.
+   */
+  public int mPopupSkbId;
 
-    public float mLeftF;
-    public float mRightF;
-    public float mTopF;
-    public float mBottomF;
-    public int mLeft;
-    public int mRight;
-    public int mTop;
-    public int mBottom;
+  public float mLeftF;
+  public float mRightF;
+  public float mTopF;
+  public float mBottomF;
+  public int mLeft;
+  public int mRight;
+  public int mTop;
+  public int mBottom;
 
-    public void setKeyType(SoftKeyType keyType, Drawable keyIcon,
-            Drawable keyIconPopup) {
-        mKeyType = keyType;
-        mKeyIcon = keyIcon;
-        mKeyIconPopup = keyIconPopup;
+  public void setKeyType(SoftKeyType keyType, Drawable keyIcon, Drawable keyIconPopup) {
+    mKeyType = keyType;
+    mKeyIcon = keyIcon;
+    mKeyIconPopup = keyIconPopup;
+  }
+
+  // The caller guarantees that all parameters are in [0, 1]
+  public void setKeyDimensions(float left, float top, float right, float bottom) {
+    mLeftF = left;
+    mTopF = top;
+    mRightF = right;
+    mBottomF = bottom;
+  }
+
+  public void setKeyAttribute(int keyCode, String label, boolean repeat, boolean balloon) {
+    mKeyCode = keyCode;
+    mKeyLabel = label;
+
+    if (repeat) {
+      mKeyMask |= KEYMASK_REPEAT;
+    } else {
+      mKeyMask &= (~KEYMASK_REPEAT);
     }
 
-    // The caller guarantees that all parameters are in [0, 1]
-    public void setKeyDimensions(float left, float top, float right,
-            float bottom) {
-        mLeftF = left;
-        mTopF = top;
-        mRightF = right;
-        mBottomF = bottom;
+    if (balloon) {
+      mKeyMask |= KEYMASK_BALLOON;
+    } else {
+      mKeyMask &= (~KEYMASK_BALLOON);
     }
+  }
 
-    public void setKeyAttribute(int keyCode, String label, boolean repeat,
-            boolean balloon) {
-        mKeyCode = keyCode;
-        mKeyLabel = label;
+  public void setPopupSkbId(int popupSkbId) {
+    mPopupSkbId = popupSkbId;
+  }
 
-        if (repeat) {
-            mKeyMask |= KEYMASK_REPEAT;
-        } else {
-            mKeyMask &= (~KEYMASK_REPEAT);
-        }
+  // Call after setKeyDimensions(). The caller guarantees that the
+  // keyboard with and height are valid.
+  public void setSkbCoreSize(int skbWidth, int skbHeight) {
+    mLeft = (int) (mLeftF * skbWidth);
+    mRight = (int) (mRightF * skbWidth);
+    mTop = (int) (mTopF * skbHeight);
+    mBottom = (int) (mBottomF * skbHeight);
+  }
 
-        if (balloon) {
-            mKeyMask |= KEYMASK_BALLOON;
-        } else {
-            mKeyMask &= (~KEYMASK_BALLOON);
-        }
+  public Drawable getKeyIcon() {
+    return mKeyIcon;
+  }
+
+  public Drawable getKeyIconPopup() {
+    if (null != mKeyIconPopup) {
+      return mKeyIconPopup;
     }
+    return mKeyIcon;
+  }
 
-    public void setPopupSkbId(int popupSkbId) {
-        mPopupSkbId = popupSkbId;
-    }
+  public int getKeyCode() {
+    return mKeyCode;
+  }
 
-    // Call after setKeyDimensions(). The caller guarantees that the
-    // keyboard with and height are valid.
-    public void setSkbCoreSize(int skbWidth, int skbHeight) {
-        mLeft = (int) (mLeftF * skbWidth);
-        mRight = (int) (mRightF * skbWidth);
-        mTop = (int) (mTopF * skbHeight);
-        mBottom = (int) (mBottomF * skbHeight);
-    }
+  public String getKeyLabel() {
+    return mKeyLabel;
+  }
 
-    public Drawable getKeyIcon() {
-        return mKeyIcon;
+  public void changeCase(boolean upperCase) {
+    if (null != mKeyLabel) {
+      if (upperCase) {
+        mKeyLabel = mKeyLabel.toUpperCase();
+      } else {
+        mKeyLabel = mKeyLabel.toLowerCase();
+      }
     }
+  }
 
-    public Drawable getKeyIconPopup() {
-        if (null != mKeyIconPopup) {
-            return mKeyIconPopup;
-        }
-        return mKeyIcon;
-    }
+  public Drawable getKeyBg() {
+    return mKeyType.mKeyBg;
+  }
 
-    public int getKeyCode() {
-        return mKeyCode;
-    }
+  public Drawable getKeyHlBg() {
+    return mKeyType.mKeyHlBg;
+  }
 
-    public String getKeyLabel() {
-        return mKeyLabel;
-    }
+  public int getColor() {
+    return mKeyType.mColor;
+  }
 
-    public void changeCase(boolean upperCase) {
-        if (null != mKeyLabel) {
-            if (upperCase)
-                mKeyLabel = mKeyLabel.toUpperCase();
-            else
-                mKeyLabel = mKeyLabel.toLowerCase();
-        }
-    }
+  public int getColorHl() {
+    return mKeyType.mColorHl;
+  }
 
-    public Drawable getKeyBg() {
-        return mKeyType.mKeyBg;
-    }
+  public int getColorBalloon() {
+    return mKeyType.mColorBalloon;
+  }
 
-    public Drawable getKeyHlBg() {
-        return mKeyType.mKeyHlBg;
-    }
+  public boolean isKeyCodeKey() {
+    if (mKeyCode > 0) return true;
+    return false;
+  }
 
-    public int getColor() {
-        return mKeyType.mColor;
-    }
+  public boolean isUserDefKey() {
+    if (mKeyCode < 0) return true;
+    return false;
+  }
 
-    public int getColorHl() {
-        return mKeyType.mColorHl;
-    }
+  public boolean isUniStrKey() {
+    if (null != mKeyLabel && mKeyCode == 0) return true;
+    return false;
+  }
 
-    public int getColorBalloon() {
-        return mKeyType.mColorBalloon;
-    }
+  public boolean needBalloon() {
+    return (mKeyMask & KEYMASK_BALLOON) != 0;
+  }
 
-    public boolean isKeyCodeKey() {
-        if (mKeyCode > 0) return true;
-        return false;
-    }
+  public boolean repeatable() {
+    return (mKeyMask & KEYMASK_REPEAT) != 0;
+  }
 
-    public boolean isUserDefKey() {
-        if (mKeyCode < 0) return true;
-        return false;
-    }
+  public int getPopupResId() {
+    return mPopupSkbId;
+  }
 
-    public boolean isUniStrKey() {
-        if (null != mKeyLabel && mKeyCode == 0) return true;
-        return false;
-    }
+  public int width() {
+    return mRight - mLeft;
+  }
 
-    public boolean needBalloon() {
-        return (mKeyMask & KEYMASK_BALLOON) != 0;
-    }
+  public int height() {
+    return mBottom - mTop;
+  }
 
-    public boolean repeatable() {
-        return (mKeyMask & KEYMASK_REPEAT) != 0;
+  public boolean moveWithinKey(int x, int y) {
+    if (mLeft - MAX_MOVE_TOLERANCE_X <= x
+        && mTop - MAX_MOVE_TOLERANCE_Y <= y
+        && mRight + MAX_MOVE_TOLERANCE_X > x
+        && mBottom + MAX_MOVE_TOLERANCE_Y > y) {
+      return true;
     }
+    return false;
+  }
 
-    public int getPopupResId() {
-        return mPopupSkbId;
-    }
-
-    public int width() {
-        return mRight - mLeft;
-    }
-
-    public int height() {
-        return mBottom - mTop;
-    }
-
-    public boolean moveWithinKey(int x, int y) {
-        if (mLeft - MAX_MOVE_TOLERANCE_X <= x
-                && mTop - MAX_MOVE_TOLERANCE_Y <= y
-                && mRight + MAX_MOVE_TOLERANCE_X > x
-                && mBottom + MAX_MOVE_TOLERANCE_Y > y) {
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public String toString() {
-        String str = "\n";
-        str += "  keyCode: " + String.valueOf(mKeyCode) + "\n";
-        str += "  keyMask: " + String.valueOf(mKeyMask) + "\n";
-        str += "  keyLabel: " + (mKeyLabel == null ? "null" : mKeyLabel) + "\n";
-        str += "  popupResId: " + String.valueOf(mPopupSkbId) + "\n";
-        str += "  Position: " + String.valueOf(mLeftF) + ", "
-                + String.valueOf(mTopF) + ", " + String.valueOf(mRightF) + ", "
-                + String.valueOf(mBottomF) + "\n";
-        return str;
-    }
+  @Override public String toString() {
+    String str = "\n";
+    str += "  keyCode: " + String.valueOf(mKeyCode) + "\n";
+    str += "  keyMask: " + String.valueOf(mKeyMask) + "\n";
+    str += "  keyLabel: " + (mKeyLabel == null ? "null" : mKeyLabel) + "\n";
+    str += "  popupResId: " + String.valueOf(mPopupSkbId) + "\n";
+    str += "  Position: "
+        + String.valueOf(mLeftF)
+        + ", "
+        + String.valueOf(mTopF)
+        + ", "
+        + String.valueOf(mRightF)
+        + ", "
+        + String.valueOf(mBottomF)
+        + "\n";
+    return str;
+  }
 }

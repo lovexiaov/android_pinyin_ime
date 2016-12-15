@@ -70,6 +70,7 @@
   <key_icon code="67" icon="@drawable/delete_icon"
     icon_popup="@drawable/delete_popup_icon"/>
 
+  <!--code 对应 <key-icon> 节点中的 code；key_type 对应 <key_type> 节点中的 id-->
   <!-- Default key definition -->
   <!-- Enter key for QWERTY-like keyboards.-->
   <key id="1" start_pos_x="80%p" start_pos_y="75%p"
