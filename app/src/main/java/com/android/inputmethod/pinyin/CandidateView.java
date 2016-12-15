@@ -260,6 +260,7 @@ public class CandidateView extends View {
     setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec),
         getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));
 
+    int x = getMeasuredWidth(); int y = getMeasuredHeight();
     if (mOldWidth != getMeasuredWidth() || mOldHeight != getMeasuredHeight()) {
       onSizeChanged();
     }
@@ -394,7 +395,7 @@ public class CandidateView extends View {
     mFmiFootnote = mFootnotePaint.getFontMetricsInt();
 
     // When the size is changed, the first page will be displayed.
-    mPageNo = 0;
+    //mPageNo = 0; //TODO this line will cause failure to navigate forward or back.
     mActiveCandInPage = 0;
   }
 
