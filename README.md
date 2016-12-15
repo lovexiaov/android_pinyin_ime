@@ -1,5 +1,1 @@
-# PinyinIME
-
-Fork from [Google PinyinIME](https://android.googlesource.com/platform/packages/inputmethods/PinyinIME/)
-
-Need Android Studio 2.2 and above
+本项目基于[bu2zhouzhu/PinyinIME](https://github.com/bu2zhouzhu/PinyinIME)，提取自 AOSP。
