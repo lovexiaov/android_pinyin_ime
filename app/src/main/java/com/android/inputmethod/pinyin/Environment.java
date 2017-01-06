@@ -102,7 +102,7 @@ public class Environment {
   private int mNormalBalloonTextSize;
   private int mFunctionBalloonTextSize;
   private Configuration mConfig = new Configuration();
-  private boolean mDebug = false;
+  private boolean mDebug = true;
 
   private Environment() {
   }

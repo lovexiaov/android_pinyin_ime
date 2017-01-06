@@ -1063,6 +1063,11 @@ public class PinyinIME extends InputMethodService {
     return mSkbContainer;
   }
 
+  /**
+   * Used for HKB with no keyboard view.
+   * @param editorInfo
+   * @param restarting
+   */
   @Override public void onStartInput(EditorInfo editorInfo, boolean restarting) {
     if (mEnvironment.needDebug()) {
       Log.d(TAG, "onStartInput "

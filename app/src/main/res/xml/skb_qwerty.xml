@@ -13,6 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+ <!--width 定义的是每一个 key 的宽度， %p 的意思是占父容器的百分比-->
 <keyboard
   skb_template="@xml/skb_template1"
   skb_cache_flag="true"
@@ -29,7 +30,7 @@
       codes="45|51|33|46|48|53|49|37|43|44"/>
   </row>
 
-  <!--width 属性限制的是 key 的宽度-->
+  <!--width 覆盖 keyboard 中的定义-->
   <row start_pos_x="4.078%p" width="10.205%p">
     <keys splitter="|" labels="A|S|D|F|G|H|J|K|L"
       codes="29|47|32|34|35|36|38|39|40"/>
