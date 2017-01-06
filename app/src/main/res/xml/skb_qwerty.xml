@@ -52,7 +52,7 @@
     </key>
     <keys splitter="|" labels="Z|X|C|V|B|N|M"
       codes="54|52|31|50|30|42|41"/>
-    <!-- 这里的 id 对应 template 中 <key> 节点的 id -->
+    <!-- 这里的 id 对应 template 中的 <key> 节点的 id -->
     <key id="3"/>
   </row>
 
