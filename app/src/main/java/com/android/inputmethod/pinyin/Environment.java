@@ -31,7 +31,8 @@ public class Environment {
   /**
    * The key height for portrait mode. It is relative to the screen height.
    */
-  private static final float KEY_HEIGHT_RATIO_PORTRAIT = 0.105f;
+  //private static final float KEY_HEIGHT_RATIO_PORTRAIT = 0.105f;
+  private static final float KEY_HEIGHT_RATIO_PORTRAIT = 0.085f;
 
   /**
    * The key height for landscape mode. It is relative to the screen height.

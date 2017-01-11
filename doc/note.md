@@ -23,4 +23,7 @@
 |SoftKeyboardView       |用于显示软键盘
 |SoftKeyToggle          |对应于软键盘上带开关状态的按键
 |SoundManager           |按键音效管理器
-|XmlKeyboardLoader      |加载 xml 按键布局的类
+|XmlKeyboardLoader      |加载 xml 按键布局的类，定义了 xml 文件中的属性与 java 代码和资源文件的对应关系
+
+
+键盘的高度是通过 `Enveriment.KEY_HEIGHT_RATIO_PORTRAIT` 设置 Key 的高度确定的。
