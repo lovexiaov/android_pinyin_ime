@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name">BB IME</string>
+    <string name="ime_settings_activity_name">BB IME settings</string>
+    <string name="setting">Google Pinyin input method set</string>
+    <string name="setting_sound_key_title">Key sound</string>
+    <string name="setting_vibrate_title">Key vibration</string>
+    <string name="setting_prediction_title">Associative input</string>
+    <string name="setting_switch_title">Switch between English and Chinese</string>
+    <string name="setting_enabled">Enabled</string>
+    <string name="setting_disabled">Disabled</string>
+    <string name="setting_others">Other</string>
+    <string name="setting_others_summary">Dictionary synchronization and others</string>
+    <string name="inputMethod">IME</string>
+</resources>
