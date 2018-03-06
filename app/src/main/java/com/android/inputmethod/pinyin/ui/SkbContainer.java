@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -30,6 +30,14 @@ import android.view.View.OnTouchListener;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
+
+import com.android.inputmethod.pinyin.common.Environment;
+import com.android.inputmethod.pinyin.InputModeSwitcher;
+import com.android.inputmethod.pinyin.PinyinIME;
+import com.android.inputmethod.pinyin.R;
+import com.android.inputmethod.pinyin.common.SkbPool;
+import com.android.inputmethod.pinyin.skb.SoftKey;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard;
 
 /**
  * The top container to host soft keyboard view(s).
@@ -547,7 +555,7 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
     return ret;
   }
 
-  class LongPressTimer extends Handler implements Runnable {
+  public class LongPressTimer extends Handler implements Runnable {
     /**
      * When user presses a key for a long time, the timeout interval to
      * generate first {@link #LONG_PRESS_KEYNUM1} key events.

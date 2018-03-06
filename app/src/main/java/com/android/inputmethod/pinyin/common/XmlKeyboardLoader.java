@@ -14,13 +14,18 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.common;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.graphics.drawable.Drawable;
-import com.android.inputmethod.pinyin.SoftKeyboard.KeyRow;
+import com.android.inputmethod.pinyin.skb.SkbTemplate;
+import com.android.inputmethod.pinyin.skb.SoftKey;
+import com.android.inputmethod.pinyin.skb.SoftKeyToggle;
+import com.android.inputmethod.pinyin.skb.SoftKeyType;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard.KeyRow;
 import java.io.IOException;
 import java.util.regex.Pattern;
 import org.xmlpull.v1.XmlPullParserException;

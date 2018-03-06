@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.setting;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -26,6 +26,9 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+
+import com.android.inputmethod.pinyin.R;
+
 import java.util.List;
 
 /**

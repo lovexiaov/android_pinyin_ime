@@ -45,6 +45,18 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+
+import com.android.inputmethod.pinyin.common.Environment;
+import com.android.inputmethod.pinyin.common.KeyMapDream;
+import com.android.inputmethod.pinyin.common.SoundManager;
+import com.android.inputmethod.pinyin.setting.Settings;
+import com.android.inputmethod.pinyin.setting.SettingsActivity;
+import com.android.inputmethod.pinyin.skb.SoftKey;
+import com.android.inputmethod.pinyin.ui.BalloonHint;
+import com.android.inputmethod.pinyin.ui.CandidatesContainer;
+import com.android.inputmethod.pinyin.ui.ComposingView;
+import com.android.inputmethod.pinyin.ui.SkbContainer;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -281,7 +293,6 @@ public class PinyinIME extends InputMethodService {
     } else if (keyCode == KeyEvent.KEYCODE_APOSTROPHE) {
       keyChar = '\'';
     }
-
     if (mInputModeSwitcher.isEnglishWithSkb()) {
       return mImEn.processKey(getCurrentInputConnection(), event,
           mInputModeSwitcher.isEnglishUpperCaseWithSkb(), realAction);

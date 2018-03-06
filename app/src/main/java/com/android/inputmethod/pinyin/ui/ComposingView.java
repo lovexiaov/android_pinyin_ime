@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -26,6 +26,9 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+
+import com.android.inputmethod.pinyin.PinyinIME;
+import com.android.inputmethod.pinyin.R;
 
 /**
  * View used to show composing string (The Pinyin string for the unselected
@@ -272,6 +275,6 @@ public class ComposingView extends View {
       canvas.drawText(cmpsStr, oriPos, cmpsStr.length(), x, y, mPaint);
     }
   }
-
-  private int mPaddingLeft, mPaddingRight, mPaddingTop, mPaddingBottom;
+  // TODO 目前这四个属性没有跟 xml 相关联
+  private int mPaddingLeft, mPaddingRight = 10, mPaddingTop, mPaddingBottom;
 }

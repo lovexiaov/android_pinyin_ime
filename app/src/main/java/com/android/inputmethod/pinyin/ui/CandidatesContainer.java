@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -30,7 +30,11 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
+
+import com.android.inputmethod.pinyin.CandidateViewListener;
+import com.android.inputmethod.pinyin.common.Environment;
 import com.android.inputmethod.pinyin.PinyinIME.DecodingInfo;
+import com.android.inputmethod.pinyin.R;
 
 interface ArrowUpdater {
   void updateArrowStatus();
@@ -187,7 +191,7 @@ public class CandidatesContainer extends RelativeLayout
     }
   }
 
-  public void showCandidates(PinyinIME.DecodingInfo decInfo, boolean enableActiveHighlight) {
+  public void showCandidates(DecodingInfo decInfo, boolean enableActiveHighlight) {
     if (null == decInfo) return;
     mDecInfo = decInfo;
     mCurrentPage = 0;

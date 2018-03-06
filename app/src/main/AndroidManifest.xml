@@ -43,7 +43,7 @@
                 <meta-data android:name="android.view.im" android:resource="@xml/method" />
             </service>
 
-            <activity android:name=".SettingsActivity"
+            <activity android:name=".setting.SettingsActivity"
                 android:label="@string/ime_settings_activity_name">
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN"/>

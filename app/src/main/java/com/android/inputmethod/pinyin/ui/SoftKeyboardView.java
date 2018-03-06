@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -25,7 +25,15 @@ import android.graphics.drawable.Drawable;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
-import com.android.inputmethod.pinyin.SoftKeyboard.KeyRow;
+
+import com.android.inputmethod.pinyin.common.Environment;
+import com.android.inputmethod.pinyin.setting.Settings;
+import com.android.inputmethod.pinyin.skb.SoftKey;
+import com.android.inputmethod.pinyin.skb.SoftKeyType;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard.KeyRow;
+import com.android.inputmethod.pinyin.common.SoundManager;
+
 import java.util.List;
 
 /**

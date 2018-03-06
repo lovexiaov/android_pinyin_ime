@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.skb;
 
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.view.KeyEvent;
 import com.android.inputmethod.pinyin.InputModeSwitcher.ToggleStates;
+import com.android.inputmethod.pinyin.common.Environment;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -483,11 +484,11 @@ public class SoftKeyboard {
     return super.toString();
   }
 
-  class KeyRow {
-    static final int ALWAYS_SHOW_ROW_ID = -1;
-    static final int DEFAULT_ROW_ID = 0;
+  public class KeyRow {
+    public static final int ALWAYS_SHOW_ROW_ID = -1;
+    public static final int DEFAULT_ROW_ID = 0;
 
-    List<SoftKey> mSoftKeys;
+    public List<SoftKey> mSoftKeys;
     /**
      * If the row id is {@link #ALWAYS_SHOW_ROW_ID}, this row will always be
      * enabled.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.setting;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

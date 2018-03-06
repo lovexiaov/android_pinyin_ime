@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.ui;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -29,7 +29,11 @@ import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.android.inputmethod.pinyin.CandidateViewListener;
 import com.android.inputmethod.pinyin.PinyinIME.DecodingInfo;
+import com.android.inputmethod.pinyin.R;
+
 import java.util.Vector;
 
 /**

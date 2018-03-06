@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.skb;
 
 import android.graphics.drawable.Drawable;
 
@@ -22,7 +22,7 @@ import android.graphics.drawable.Drawable;
  * Class for soft keys which defined in the keyboard xml file. A soft key can be
  * a basic key or a toggling key.
  *
- * @see com.android.inputmethod.pinyin.SoftKeyToggle
+ * @see SoftKeyToggle
  */
 public class SoftKey {
   protected static final int KEYMASK_REPEAT = 0x10000000;
@@ -50,7 +50,7 @@ public class SoftKey {
    */
   protected int mKeyMask;
 
-  protected SoftKeyType mKeyType;
+  public SoftKeyType mKeyType;
 
   protected Drawable mKeyIcon;
 
@@ -58,7 +58,7 @@ public class SoftKey {
 
   protected String mKeyLabel;
 
-  protected int mKeyCode;
+  public int mKeyCode;
 
   /**
    * If this value is not 0, this key can be used to popup a sub soft keyboard

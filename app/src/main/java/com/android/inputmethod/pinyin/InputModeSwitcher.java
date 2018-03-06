@@ -18,7 +18,9 @@ package com.android.inputmethod.pinyin;
 
 import android.content.res.Resources;
 import android.view.inputmethod.EditorInfo;
-import com.android.inputmethod.pinyin.SoftKeyboard.KeyRow;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard.KeyRow;
+import com.android.inputmethod.pinyin.common.Environment;
 
 /**
  * Switcher used to switching input mode between Chinese, English, symbol,etc.
@@ -340,21 +342,21 @@ public class InputModeSwitcher {
    */
   private int mToggleRowEmailAddress;
 
-  class ToggleStates {
+  public class ToggleStates {
     /**
      * If it is true, this soft keyboard is a QWERTY one.
      */
-    boolean mQwerty;
+    public boolean mQwerty;
 
     /**
      * If {@link #mQwerty} is true, this variable is used to decide the
      * letter case of the QWERTY keyboard.
      */
-    boolean mQwertyUpperCase;
+    public boolean mQwertyUpperCase;
 
     /**
      * The id of enabled row in the soft keyboard. Refer to
-     * {@link com.android.inputmethod.pinyin.SoftKeyboard.KeyRow} for
+     * {@link SoftKeyboard.KeyRow} for
      * details.
      */
     public int mRowIdToEnable;

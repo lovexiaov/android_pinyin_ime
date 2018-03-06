@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.os.IBinder;
 import android.util.Log;
+import com.android.inputmethod.pinyin.common.Environment;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.inputmethod.pinyin;
+package com.android.inputmethod.pinyin.common;
 
 import android.content.Context;
+import com.android.inputmethod.pinyin.skb.SkbTemplate;
+import com.android.inputmethod.pinyin.skb.SoftKeyboard;
 import java.util.Vector;
 
 /**
