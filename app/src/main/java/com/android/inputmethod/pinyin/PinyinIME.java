@@ -718,9 +718,10 @@ public class PinyinIME extends InputMethodService {
       return true;
     }
 
-    if ((keyChar >= 'a' && keyChar <= 'z') || (keyChar == '\''
-        && !mDecInfo.charBeforeCursorIsSeparator()) || (((keyChar >= '0' && keyChar <= '9')
-        || keyChar == ' ') && ImeState.STATE_COMPOSING == mImeState)) {
+    if ((keyChar >= 'a' && keyChar <= 'z')
+        || (keyChar == '\'' && !mDecInfo.charBeforeCursorIsSeparator())
+        || (((keyChar >= '0' && keyChar <= '9') || keyChar == ' ')
+        && ImeState.STATE_COMPOSING == mImeState)) {
       mDecInfo.addSplChar((char) keyChar, false);
       chooseAndUpdate(-1);
     } else if (keyCode == KeyEvent.KEYCODE_DEL) {
@@ -1051,6 +1052,7 @@ public class PinyinIME extends InputMethodService {
 
     if (null != mCandidatesContainer && mCandidatesContainer.isShown()) {
       showCandidateWindow(false);
+      setCandidatesViewShown(false);
     }
   }
 
@@ -1076,8 +1078,6 @@ public class PinyinIME extends InputMethodService {
 
   /**
    * Used for HKB with no keyboard view.
-   * @param editorInfo
-   * @param restarting
    */
   @Override public void onStartInput(EditorInfo editorInfo, boolean restarting) {
     if (mEnvironment.needDebug()) {
@@ -1545,6 +1545,7 @@ public class PinyinIME extends InputMethodService {
      * The total number of choices for display. The list may only contains
      * the first part. If user tries to navigate to next page which is not
      * in the result list, we need to get these items.
+     * 当前显示的候选项个数
      **/
     public int mTotalChoicesNum;
 
@@ -1608,6 +1609,12 @@ public class PinyinIME extends InputMethodService {
       return false;
     }
 
+    /**
+     * 将字符串添加到拼音串中
+     *
+     * @param ch 待添加的字符
+     * @param reset 是否重置当前拼音串
+     */
     public void addSplChar(char ch, boolean reset) {
       if (reset) {
         mSurface.delete(0, mSurface.length());
@@ -1622,10 +1629,12 @@ public class PinyinIME extends InputMethodService {
       mCursorPos++;
     }
 
-    // Prepare to delete before cursor. We may delete a spelling char if
-    // the cursor is in the range of unfixed part, delete a whole spelling
-    // if the cursor in inside the range of the fixed part.
-    // This function only marks the position used to delete.
+    /**
+     * Prepare to delete before cursor. We may delete a spelling char if
+     * the cursor is in the range of unfixed part, delete a whole spelling
+     * if the cursor in inside the range of the fixed part.
+     * This function only marks the position used to delete.
+     */
     public void prepareDeleteBeforeCursor() {
       if (mCursorPos > 0) {
         int pos;
@@ -1645,6 +1654,9 @@ public class PinyinIME extends InputMethodService {
       }
     }
 
+    /**
+     * @return 拼音串的长度
+     */
     public int length() {
       return mSurface.length();
     }
@@ -1722,16 +1734,20 @@ public class PinyinIME extends InputMethodService {
       return mFinishSelection;
     }
 
-    // After the user chooses a candidate, input method will do a
-    // re-decoding and give the new candidate list.
-    // If candidate id is less than 0, means user is inputting Pinyin,
-    // not selecting any choice.
+    /**
+     * After the user chooses a candidate, input method will do a
+     * re-decoding and give the new candidate list.
+     * If candidate id is less than 0, means user is inputting Pinyin,
+     * not selecting any choice.
+     *
+     * @param candId 候选项 id, id < 0 表示用户正在输入拼音
+     */
     private void chooseDecodingCandidate(int candId) {
       if (mImeState != ImeState.STATE_PREDICT) {
         resetCandidates();
         int totalChoicesNum = 0;
         try {
-          if (candId < 0) {
+          if (candId < 0) { // 正在输入拼音
             if (length() == 0) {
               totalChoicesNum = 0;
             } else {
